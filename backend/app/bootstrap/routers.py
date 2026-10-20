@@ -1,19 +1,4 @@
-"""Router registry.
+"""Not used.
 
-Phase: Step 2 (cities and cinemas APIs).
-Will hold: include_routers(app). Adds every feature router under /api/v1.
-A new feature means one new line here.
+Routes are listed in app/main.py. This file can be removed by the owner.
 """
-
-# one place for all routes.
-
-from fastapi import FastAPI, APIRouter
-
-def include_routers(app: FastAPI):
-    api= APIRouter(prefix="/api")
-    
-    @api.get("/health")
-    async def health()-> dict[str,str]:
-        return {"status": "ok"}
-    
-    app.include_router(api)

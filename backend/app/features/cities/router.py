@@ -2,6 +2,13 @@
 
 Phase: Step 2 (cities and cinemas APIs).
 Will hold:
-  GET /api/v1/cities             list all cities
-  GET /api/v1/cities/{city_id}   one city, 404 if missing
+  GET /api/cities             list all cities
 """
+
+from fastapi import APIRouter
+from app.features.cities import service
+router = APIRouter(prefix="/cities", tags=["cities"])
+
+@router.get("", response_model=list[str])
+async def list_cities() -> list[str]:
+  return service.get_city_names()
