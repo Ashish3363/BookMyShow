@@ -1,0 +1,19 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies and builds
+node_modules/
+dist/
+build/
+coverage/
+
+# OS and editor
+.DS_Store
+.vscode/*
+!.vscode/settings.json
+.idea/
+
+# Personal agent settings (not shared)
+.claude/settings.local.json
