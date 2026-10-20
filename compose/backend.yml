@@ -1,0 +1,4 @@
+# Backend service.
+# Phase: Docker.
+# Will hold: build from backend/Dockerfile, settings from env/backend.env,
+# depends_on postgres (condition: service_healthy).

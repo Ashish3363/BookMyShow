@@ -1,0 +1,8 @@
+# Files kept out of the backend image.
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+tests/
+.env
+.env.*

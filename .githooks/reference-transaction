@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Catch-all: blocks any branch or tag change (commit, reset, merge, delete) by AI agents.
+[ "$1" = "prepared" ] || exit 0
+root="$(git rev-parse --show-toplevel)"
+if "$root/scripts/is-agent.sh"; then
+  echo "BLOCKED: AI agents may not change git history or branches (Rule 2)."
+  exit 1
+fi

@@ -1,23 +1,69 @@
 {
   "permissions": {
-    "allow": [
-      "Bash(ls:*)",
-      "Bash(cat:*)",
-      "Bash(grep:*)",
-      "Bash(find:*)",
-      "Bash(git status:*)",
-      "Bash(git diff:*)",
-      "Bash(git log:*)",
-      "Bash(./scripts/check.sh)"
-    ],
+    "defaultMode": "default",
+    "disableBypassPermissionsMode": "disable",
+    "ask": ["Bash", "Write", "Edit", "NotebookEdit"],
     "deny": [
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(git add:*)",
+      "Bash(git rm:*)",
+      "Bash(git reset:*)",
+      "Bash(git checkout:*)",
+      "Bash(git clean:*)",
+      "Bash(git config:*)",
+      "Bash(gh:*)",
+      "Bash(rm:*)",
+      "Bash(rmdir:*)",
+      "Bash(unlink:*)",
+      "Bash(sudo:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(ssh:*)",
+      "Bash(scp:*)",
+      "Bash(npx:*)",
+      "Bash(npm install:*)",
+      "Bash(npm i:*)",
+      "Bash(pip install:*)",
+      "Bash(./scripts/setup.sh)",
+      "Bash(./scripts/unlock-guardrails.sh:*)",
+      "WebFetch",
+      "WebSearch",
       "Read(./.env)",
       "Read(./.env.local)",
       "Read(./.env.development)",
       "Read(./.env.production)",
-      "Read(./.env.*.local)",
-      "Bash(git commit --no-verify:*)",
-      "Bash(git commit -n:*)"
+      "Read(./.env.*.local)"
+    ]
+  },
+  "enableAllProjectMcpServers": false,
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": false,
+    "allowUnsandboxedCommands": false
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/hooks/consent.py\" prompt" }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/hooks/consent.py\" stop" }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          { "type": "command", "command": "python3 \"$CLAUDE_PROJECT_DIR/hooks/guard.py\"" }
+        ]
+      }
     ]
   }
 }

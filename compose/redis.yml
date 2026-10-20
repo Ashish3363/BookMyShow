@@ -1,0 +1,4 @@
+# Redis service.
+# Phase: Booking.
+# Will hold: redis:7.4 image, profile "cache", health check, named volume redis_data,
+# config from docker/redis/redis.conf.

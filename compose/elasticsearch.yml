@@ -1,0 +1,4 @@
+# Elasticsearch service.
+# Phase: Search.
+# Will hold: elasticsearch:8.15.0 image, profile "search", health check, named volume es_data,
+# config from docker/elasticsearch/elasticsearch.yml.

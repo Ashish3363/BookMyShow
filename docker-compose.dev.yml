@@ -1,0 +1,4 @@
+# Dev overrides.
+# Phase: Docker.
+# Will hold: live reload (code mounted into containers) and open ports for local tools.
+# Usage: docker compose -f docker-compose.yml -f docker-compose.dev.yml up

@@ -1,0 +1,8 @@
+# Main compose file.
+# Phase: Docker.
+# Will hold: an include list of compose/*.yml, the shared network, and named volumes.
+#
+# Usage (owner only, agents cannot run docker):
+#   docker compose up                       postgres, backend, frontend
+#   docker compose --profile cache up       + redis
+#   docker compose --profile search up      + elasticsearch

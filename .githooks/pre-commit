@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
-# Runs the shared checks before every commit.
-exec "$(git rev-parse --show-toplevel)/scripts/check.sh"
+# Blocks commits made by AI agents, then runs the shared checks.
+root="$(git rev-parse --show-toplevel)"
+if "$root/scripts/is-agent.sh"; then
+  echo "BLOCKED: AI agents may not commit (Rule 2). Only the owner runs git."
+  exit 1
+fi
+exec "$root/scripts/check.sh"

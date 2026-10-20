@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Mumbai", "state": "Maharashtra", "slug": "mumbai" },
+  { "id": 2, "name": "Delhi", "state": "Delhi", "slug": "delhi" },
+  { "id": 3, "name": "Bengaluru", "state": "Karnataka", "slug": "bengaluru" },
+  { "id": 4, "name": "Hyderabad", "state": "Telangana", "slug": "hyderabad" },
+  { "id": 5, "name": "Pune", "state": "Maharashtra", "slug": "pune" }
+]

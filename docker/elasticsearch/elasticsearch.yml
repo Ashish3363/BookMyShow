@@ -1,0 +1,3 @@
+# Elasticsearch settings.
+# Phase: Search.
+# Will hold: single-node mode, memory limits, and security settings for local dev.

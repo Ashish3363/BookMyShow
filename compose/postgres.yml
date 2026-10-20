@@ -1,0 +1,4 @@
+# PostgreSQL service.
+# Phase: Docker.
+# Will hold: postgres:16 image, health check (pg_isready), named volume postgres_data,
+# init scripts from docker/postgres/init, settings from env/postgres.env.

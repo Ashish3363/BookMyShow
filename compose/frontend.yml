@@ -1,0 +1,3 @@
+# Frontend service.
+# Phase: Docker.
+# Will hold: build from frontend/Dockerfile, depends_on backend.

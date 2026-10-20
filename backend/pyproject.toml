@@ -1,0 +1,10 @@
+# Backend project file (uv).
+# Phase: Step 2 adds dependencies: fastapi, sqlalchemy, asyncpg, alembic,
+# pydantic-settings, and dev tools pytest and httpx.
+
+[project]
+name = "bookmyshow-backend"
+version = "0.1.0"
+description = "BookMyShow clone backend (FastAPI)"
+requires-python = ">=3.12"
+dependencies = []

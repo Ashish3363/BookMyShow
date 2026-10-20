@@ -1,0 +1,6 @@
+{
+  "name": "bookmyshow-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "BookMyShow clone frontend (React + TypeScript 7). Step 2 adds scripts and dependencies: react, react-dom, react-router, vite, typescript 7."
+}

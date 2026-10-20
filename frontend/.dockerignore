@@ -1,0 +1,5 @@
+# Files kept out of the frontend image.
+node_modules/
+dist/
+.env
+.env.*

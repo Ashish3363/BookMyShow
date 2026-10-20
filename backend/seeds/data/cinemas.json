@@ -1,0 +1,12 @@
+[
+  { "id": 1, "city_id": 1, "name": "PVR Phoenix Palladium", "address": "Lower Parel, Mumbai", "screens": 7 },
+  { "id": 2, "city_id": 1, "name": "INOX Nariman Point", "address": "Nariman Point, Mumbai", "screens": 4 },
+  { "id": 3, "city_id": 2, "name": "PVR Select Citywalk", "address": "Saket, New Delhi", "screens": 6 },
+  { "id": 4, "city_id": 2, "name": "Cinepolis DLF Avenue", "address": "Saket, New Delhi", "screens": 5 },
+  { "id": 5, "city_id": 3, "name": "PVR Orion Mall", "address": "Rajajinagar, Bengaluru", "screens": 11 },
+  { "id": 6, "city_id": 3, "name": "INOX Garuda Mall", "address": "Magrath Road, Bengaluru", "screens": 6 },
+  { "id": 7, "city_id": 4, "name": "Prasads Multiplex", "address": "NTR Gardens, Hyderabad", "screens": 6 },
+  { "id": 8, "city_id": 4, "name": "AMB Cinemas", "address": "Gachibowli, Hyderabad", "screens": 7 },
+  { "id": 9, "city_id": 5, "name": "PVR Phoenix Marketcity", "address": "Viman Nagar, Pune", "screens": 9 },
+  { "id": 10, "city_id": 5, "name": "City Pride Kothrud", "address": "Kothrud, Pune", "screens": 4 }
+]

@@ -1,0 +1,3 @@
+-- PostgreSQL first-run setup.
+-- Phase: Docker.
+-- Will hold: create the bookmyshow database and app user. Runs once, on first start only.

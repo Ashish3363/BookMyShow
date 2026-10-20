@@ -1,0 +1,4 @@
+// TypeScript 7 config.
+// Phase: Step 2 (cities and cinemas pages).
+// Will hold: strict mode, JSX for React, module resolution for Vite.
+{}

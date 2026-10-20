@@ -17,3 +17,6 @@ coverage/
 
 # Personal agent settings (not shared)
 .claude/settings.local.json
+.venv/
+__pycache__/
+env/*.env

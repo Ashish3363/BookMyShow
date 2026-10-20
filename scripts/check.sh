@@ -5,8 +5,9 @@ set -euo pipefail
 
 fail=0
 
-# Files to check: staged files inside git, otherwise all tracked-looking files.
-if git rev-parse --is-inside-work-tree >/dev/null 2>&1 && [ -n "$(git diff --cached --name-only)" ]; then
+# Files to check: staged files inside git, otherwise all files.
+# Agents never use git (Rule 2), so they always scan all files.
+if ! "$(dirname "$0")/is-agent.sh" && git rev-parse --is-inside-work-tree >/dev/null 2>&1 && [ -n "$(git diff --cached --name-only)" ]; then
   files=$(git diff --cached --name-only --diff-filter=ACM)
 else
   files=$(find . -type f -not -path './.git/*' -not -path '*/node_modules/*' | sed 's|^\./||')

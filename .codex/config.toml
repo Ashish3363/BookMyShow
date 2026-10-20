@@ -1,0 +1,9 @@
+# Codex CLI project settings. Matches the rules in AGENTS.md.
+# Ask before running any command (Rule 1).
+approval_policy = "untrusted"
+# Write only inside this project folder (Rule 5).
+sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+# No outside contact (Rule 7).
+network_access = false
