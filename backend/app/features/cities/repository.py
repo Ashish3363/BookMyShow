@@ -1,16 +1,10 @@
-"""City data access.
+"""City data access(PostgreSQL)."""
 
-Phase: Step 2 (cities and cinemas APIs).
-Will hold: list_cities() and get_city(city_id). Always skips soft-deleted rows.
-"""
-
-"""City data access. Reads seed JSON for now."""
-
-import json
-from pathlib import Path
-
-DATA_FILE = Path(__file__).resolve().parents[3] / "seeds" / "data" / "cities.json"
+from sqlalchemy import select
+from app.features.cities.models import City 
+async def get_cities(session):
+    """Get all cities."""
+    result = await session.scalars(select(City).order_by(City.id))
+    return list(result)
 
 
-def get_cities() -> list[dict]:
-    return json.loads(DATA_FILE.read_text())

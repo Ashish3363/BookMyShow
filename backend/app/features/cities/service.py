@@ -1,10 +1,8 @@
-"""City logic.
-
-Phase: Step 2 (cities and cinemas APIs).
-Will hold: calls the repository and raises NotFoundError when a city is missing.
-"""
+"""City logic."""
 
 from app.features.cities import repository
 
-def get_city_names() -> list[str]:
-    return [city["name"] for city in repository.get_cities()]
+
+async def get_city_names(session) -> list[str]:
+    cities = await repository.get_cities(session)
+    return [city.name for city in cities]

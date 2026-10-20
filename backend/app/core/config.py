@@ -12,7 +12,7 @@ from pydantic_settings import BaseSettings,SettingsConfigDict
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file="../env/backend.env", extra="ignore")
     app_name: str = "BookMyShow"
-    database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/bookmyshow"
+    database_url: str = "postgresql+asyncpg://bookmyshow:bookmyshow@localhost:5432/bookmyshow"
     
     
 @lru_cache
